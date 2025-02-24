@@ -23,7 +23,8 @@
 
               <h2 class="text-secondary text-center">Formulario</h2>
 
-              <form method="post">
+              <form action="/crear-contacto" method="post">
+                @csrf
                 <!-- Correo -->
                 <div class="mb-3">
                   <label for="email" class="form-label">Correo:</label>

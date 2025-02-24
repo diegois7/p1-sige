@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request; 
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,11 @@ Route::get('/inicio', function () {
 
 Route::get('/contacto', function () {
     return view('contact');
+});
+
+Route::post('/crear-contacto', function(Request $request) {
+    //dd('Llego a ruta');
+    dd( $request->all(), $request->email );
 });
 
 require __DIR__.'/auth.php';
